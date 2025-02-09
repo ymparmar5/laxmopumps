@@ -92,7 +92,9 @@ const Category = () => {
                             </div>
                             <h1 className="category-names">{item.name}</h1>
                             <p className="category-viewmore">View more..</p>
-                            {role === "admin" && (
+                          
+                        </div>
+                        {role === "admin" && (
                             <input  style={{
                                 width: "130px", // Smaller width
                                 height: "25px", // Reduce height
@@ -102,8 +104,6 @@ const Category = () => {
                                 cursor: "pointer",
                             }} type="file" onChange={(e) => handleImageUpload(e, index)} />
                         )}
-                        </div>
-                        
                     </div>
                 ))}
             </div>
