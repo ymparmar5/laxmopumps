@@ -85,23 +85,25 @@ const Category = () => {
             <div className="home-category" ref={containerRef}>
                 {category.map((item, index) => (
                     <div key={item.id} className="category-container">
+
                         <div onClick={() => handleCategoryClick(item.name)}>
                             <div className="category-imgs">
                                 <img src={item.image} alt={item.name} />
                             </div>
                             <h1 className="category-names">{item.name}</h1>
                             <p className="category-viewmore">View more..</p>
-                        </div>
-                        {role === "admin" && (
+                            {role === "admin" && (
                             <input  style={{
                                 width: "130px", // Smaller width
-                                height: "10px", // Reduce height
+                                height: "25px", // Reduce height
                                 fontSize: "10px", // Adjust font size
                                 padding: "4px", // Add padding
                                 border: "1px solid #ccc", // Light border
                                 cursor: "pointer",
                             }} type="file" onChange={(e) => handleImageUpload(e, index)} />
                         )}
+                        </div>
+                        
                     </div>
                 ))}
             </div>
